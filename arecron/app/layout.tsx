@@ -17,10 +17,11 @@ export const metadata: Metadata = {
   description: "ARECRON GLOBAL is a professionally managed export and trading firm in Chennai, India, specializing in agro-based products, dairy, marine, spices, and more for global markets.",
   icons: {
     icon: [
-      { url: "/logo.svg" },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/logo.svg?v=2", type: "image/svg+xml" },
     ],
-    shortcut: "/logo.svg",
-    apple: "/logo.svg",
+    shortcut: "/favicon.ico",
+    apple: "/logo.svg?v=2",
   },
 };
 
