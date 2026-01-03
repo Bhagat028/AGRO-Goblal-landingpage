@@ -1,5 +1,0 @@
-{
-  "buildCommand": "cd arecron && npm run build",
-  "outputDirectory": "arecron/.next",
-  "installCommand": "cd arecron && npm install"
-}
