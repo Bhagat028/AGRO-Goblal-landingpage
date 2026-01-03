@@ -413,8 +413,8 @@ const ArecronWebsite = () => {
 
               {submitStatus && (
                 <div className={`mb-4 p-4 rounded-lg ${submitStatus.type === 'success'
-                    ? 'bg-green-50 border border-green-200 text-green-800'
-                    : 'bg-red-50 border border-red-200 text-red-800'
+                  ? 'bg-green-50 border border-green-200 text-green-800'
+                  : 'bg-red-50 border border-red-200 text-red-800'
                   }`}>
                   {submitStatus.message}
                 </div>
@@ -511,52 +511,16 @@ const ArecronWebsite = () => {
         </div>
       </footer>
 
-      {/* Chat Bot Widget */}
-      <div className="fixed bottom-6 right-6 z-50">
-        {!isChatOpen && (
-          <button
-            onClick={toggleChat}
-            className="bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-2xl transition transform hover:scale-110 flex items-center justify-center"
-          >
-            <MessageCircle className="w-8 h-8" />
-          </button>
-        )}
-
-        {isChatOpen && (
-          <div className="bg-white w-80 md:w-96 rounded-2xl shadow-2xl overflow-hidden border border-gray-200 flex flex-col h-96">
-            <div className="bg-slate-900 text-white p-4 flex justify-between items-center">
-              <div className="flex items-center">
-                <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
-                <span className="font-bold">Arecron Support</span>
-              </div>
-              <button onClick={toggleChat} className="hover:bg-slate-700 rounded p-1"><X className="w-5 h-5" /></button>
-            </div>
-
-            <div className="flex-1 p-4 bg-gray-50 overflow-y-auto space-y-4">
-              {chatMessages.map((msg, idx) => (
-                <div key={idx} className={`flex ${msg.isUser ? 'justify-end' : 'justify-start'}`}>
-                  <div className={`max-w-[80%] p-3 rounded-lg text-sm ${msg.isUser ? 'bg-blue-600 text-white rounded-br-none' : 'bg-gray-200 text-gray-800 rounded-bl-none'}`}>
-                    {msg.text}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <form onSubmit={handleChatSubmit} className="p-3 bg-white border-t border-gray-200 flex gap-2">
-              <input
-                type="text"
-                value={chatInput}
-                onChange={(e) => setChatInput(e.target.value)}
-                placeholder="Type 'meat', 'spices', 'overall'..."
-                className="flex-1 border border-gray-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-blue-500"
-              />
-              <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full">
-                <Send className="w-4 h-4" />
-              </button>
-            </form>
-          </div>
-        )}
-      </div>
+      {/* WhatsApp Widget */}
+      <a
+        href="https://wa.me/917338795255"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-2xl transition transform hover:scale-110 flex items-center justify-center"
+        aria-label="Chat on WhatsApp"
+      >
+        <MessageCircle className="w-8 h-8" />
+      </a>
 
     </div>
   );
